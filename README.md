@@ -84,8 +84,6 @@ tank/
    sudo chmod 600 .env
    ```
 
-   > Alternatively generate the `.env` file using the `env.template` template with Woodpecker CI's `.woodpecker.yml`.
-
 4. **Start Gitea**
 
    ```bash
@@ -98,8 +96,8 @@ tank/
 
 Once deployed, access Gitea using:
 
-- **Web Interface (HTTP):** `http://localhost:88/admin` or replace `localhost` with your server’s IP address.  
-- **Admin Password:** Must be set via `WEBPASSWORD` in `.env` or a random password will be generated.
+- **Web Interface (HTTP):** `http://localhost:3001` or replace `localhost` with your server’s IP address.  
+- **Initial Setup:** Follow the prompts to complete the initial setup.
 
 > **Note:** Consider using [Nginx Proxy Manager](https://github.com/Vantasin/Nginx-Proxy-Manager.git) as a reverse proxy for HTTPS certificates via Let's Encrypt.
 
@@ -107,16 +105,6 @@ Once deployed, access Gitea using:
   <img
     src="images/proxy-host.png"
     alt="Gitea Proxy Host UI"
-    style="width:50%; height:auto;"
-  />
-</p>
-
-> **Note:** Consider using [Tailscale](https://tailscale.com/) then setting `Global nameservers` to your host server's (the server running Gitea) Tailscale IP address and enabling `Override DNS servers`. This will make Gitea the sole DNS resolver for all devices on your Tailscale network and will allow Gitea to filter domains thereby blocking Ads.
-
-<p align="center">
-  <img
-    src="images/nameservers.png"
-    alt="Tailscale Nameservers UI"
     style="width:50%; height:auto;"
   />
 </p>
