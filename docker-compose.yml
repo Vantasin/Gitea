@@ -14,7 +14,7 @@ services:
       - GITEA__server__ROOT_URL=${GITEA_ROOT_URL}
       - GITEA__server__SSH_DOMAIN=${GITEA_SSH_DOMAIN}
       - GITEA__server__SSH_PORT=${GITEA_SSH_PORT}
-    restart: always
+    restart: unless-stopped
     depends_on:
       - db
     networks:
@@ -30,7 +30,7 @@ services:
   db:
     image: postgres:15-alpine
     container_name: gitea-db
-    restart: always
+    restart: unless-stopped
     environment:
       - POSTGRES_DB=${GITEA_DB_NAME}
       - POSTGRES_USER=${GITEA_DB_USER}
