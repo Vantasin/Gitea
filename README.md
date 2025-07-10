@@ -83,6 +83,8 @@ tank/
    sudo chmod 600 .env
    ```
 
+   > **Note:** Be sure to update the `GITEA_DB_PASSWORD`, `GITEA_ROOT_URL`, `GITEA_SSH_DOMAIN`, and if necessary the `GITEA_DATA_VOLUME`.
+
 4. **Start Gitea**
 
    ```bash
