@@ -99,6 +99,9 @@ Once deployed, access Gitea using:
 
 - **Web Interface (HTTP):** `http://localhost:3001` or replace `localhost` with your server’s IP address.  
 - **Initial Setup:** Follow the prompts to complete the initial setup.
+  > **Note:** The field's are pre-populated based on the .env file you just created.
+- **Add SSH Keys:** Go to Settings -> SSH/GPG Keys -> Manage SSH Keys -> Add Key
+  > **Note:** SSH keys are typically found at `~/.ssh/id_rsa.pub`.
 
 > **Note:** Consider using [Nginx Proxy Manager](https://github.com/Vantasin/Nginx-Proxy-Manager.git) as a reverse proxy for HTTPS certificates via Let's Encrypt.
 
