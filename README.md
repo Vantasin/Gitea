@@ -6,12 +6,11 @@ Brings teams and developers high-efficiency but easy operations from planning to
 # 📦 Gitea Docker Compose Stack
 
 [![MIT License](https://img.shields.io/github/license/Vantasin/Gitea?style=flat-square)](LICENSE)
-[![Woodpecker CI](https://img.shields.io/badge/Woodpecker%20CI-self--hosted-green?logo=drone&style=flat-square)](https://woodpecker-ci.org/)
-[![Docker Pulls: Gitea/Gitea](https://img.shields.io/docker/pulls/Gitea/Gitea?style=flat-square&logo=docker)](https://hub.docker.com/r/Gitea/Gitea)
-[![envsubst](https://img.shields.io/badge/envsubst-variable%20substitution-lightgrey?style=flat-square)](https://man7.org/linux/man-pages/man1/envsubst.1.html)
+[![Docker Pulls: gitea/gitea](https://img.shields.io/docker/pulls/gitea/gitea?style=flat-square&logo=docker)](https://hub.docker.com/r/gitea/gitea)
 [![ZFS](https://img.shields.io/badge/ZFS-OpenZFS-blue?style=flat-square)](https://openzfs.org/)
 
-This repository contains a minimal and production-ready [Gitea](https://Gitea.net/) stack using Docker Compose. Gitea is a network-wide ad blocker that acts as a DNS sinkhole and optionally a DHCP server.
+This repository contains a minimal and production-ready [Gitea](https://gitea.io/) stack using Docker Compose.  
+**Gitea** is a lightweight, self-hosted Git service offering Git repository hosting, code review, issue tracking, and CI integration.
 
 ---
 
@@ -113,10 +112,8 @@ Once deployed, access Gitea using:
 
 ## 🙏 Acknowledgments
 
-- [ChatGPT](https://openai.com/chatgpt) for assistance in generating setup scripts and templates.
-- [Gitea/docker-Gitea](https://github.com/Gitea/docker-Gitea) the official Docker image and source code for Gitea.
-- [Gitea documentation](https://docs.Gitea.net/) the official user guide and admin reference for configuring and troubleshooting Gitea.
-- [Docker](https://www.docker.com/) for container orchestration and runtime.
-- [`envsubst`](https://man7.org/linux/man-pages/man1/envsubst.1.html) for lightweight environment variable substitution in template files.
-- [Woodpecker CI](https://woodpecker-ci.org/) for lightweight, self-hosted continuous integration.
-- [ZFS](https://openzfs.org/) for advanced local filesystem features, dataset organization, and snapshotting.
+- [ChatGPT](https://openai.com/chatgpt) — for assistance in generating setup scripts and templates.
+- [Gitea / docker-gitea](https://github.com/go-gitea/gitea) — the official source code and Docker image for Gitea.
+- [Gitea Documentation](https://docs.gitea.io/) — the official user guide and admin reference for configuring and troubleshooting Gitea.
+- [Docker](https://www.docker.com/) — for container orchestration and runtime.
+- [OpenZFS](https://openzfs.org/) — for advanced local filesystem features, dataset organization, and snapshotting.
