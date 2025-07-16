@@ -84,6 +84,7 @@ tank/
    ```
 
    > **Note:** Be sure to update the `GITEA_DB_PASSWORD`, `GITEA_ROOT_URL`, `GITEA_SSH_DOMAIN`, and if necessary the `GITEA_DATA_VOLUME`.
+   > **Note:** Create the `GITEA_ROOT_URL` using [Nginx Proxy Manager](https://github.com/Vantasin/Nginx-Proxy-Manager.git) as a reverse proxy for HTTPS certificates via Let's Encrypt.
 
 4. **Start Gitea**
 
@@ -102,8 +103,6 @@ Once deployed, access Gitea using:
   > **Note:** The field's are pre-populated based on the .env file you just created.
 - **Add SSH Keys:** Go to Settings -> SSH/GPG Keys -> Manage SSH Keys -> Add Key
   > **Note:** SSH keys are typically found at `~/.ssh/id_rsa.pub`.
-
-> **Note:** Consider using [Nginx Proxy Manager](https://github.com/Vantasin/Nginx-Proxy-Manager.git) as a reverse proxy for HTTPS certificates via Let's Encrypt.
 
 <p align="center">
   <img
