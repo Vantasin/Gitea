@@ -1,8 +1,3 @@
-# Gitea
-
-Private, Fast, Reliable DevOps Platform.
-Brings teams and developers high-efficiency but easy operations from planning to production.
-
 # 📦 Gitea Docker Compose Stack
 
 [![MIT License](https://img.shields.io/github/license/Vantasin/Gitea?style=flat-square)](LICENSE)
