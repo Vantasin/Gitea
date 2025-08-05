@@ -19,7 +19,6 @@ tank/
 │   │       ├── docker-compose.yml  # Main Docker Compose config
 │   │       ├── .env                # Runtime environment variables and secrets (gitignored!)
 │   │       ├── env.example         # Example .env file for reference
-│   │       ├── env.template        # Optional template
 │   │       └── README.md           # This file
 │   └── data/
 │       └── gitea/              # Volume mounts and persistent data
@@ -81,14 +80,17 @@ tank/
    > **Note:** Be sure to update the `GITEA_DB_PASSWORD`, `GITEA_ROOT_URL`, `GITEA_SSH_DOMAIN`, and if necessary the `GITEA_DATA_VOLUME`.
 
    > **Note:** Create the `GITEA_ROOT_URL` using [Nginx Proxy Manager](https://github.com/Vantasin/Nginx-Proxy-Manager.git) as a reverse proxy for HTTPS certificates via Let's Encrypt.
-
-   <p align="center">
-  <img
-    src="images/proxy-host.png"
-    alt="Gitea Proxy Host UI"
-    style="width:50%; height:auto;"
-  />
-</p>
+   >
+   > **Proxy Host:**
+   >  - **Domain Name:** `https://gitea.example.com`
+   >  - **Scheme:** `http`
+   >  - **Forward Hostname/IP:** `gitea`
+   >  - **Forward Port:** `3000`
+   >
+   > **SSL:**
+   >  - Check **Enable SSL**
+   >  - From the **Certificate** dropdown select your `*.example.com` certificate
+   >  - Enable **Force SSL** to redirect all HTTP → HTTPS
 
 4. **Start Gitea**
 
@@ -102,7 +104,7 @@ tank/
 
 Once deployed, access Gitea using:
 
-- **Web Interface (HTTP):** `http://localhost:3001` or replace `localhost` with your server’s IP address.  
+- **Web Interface (HTTP):** `https://gitea.example.com`.
 - **Initial Setup:** Follow the prompts to complete the initial setup.
   > **Note:** The field's are pre-populated based on the .env file you just created.
 - **Add SSH Keys:** Go to Settings -> SSH/GPG Keys -> Manage SSH Keys -> Add Key
