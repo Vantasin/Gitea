@@ -24,6 +24,8 @@ services:
       - ${GITEA_DATA_VOLUME}/data:/data
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "${GITEA_SSH_PORT}:22"            # SSH for Git
 
   db:
     image: postgres:15-alpine
