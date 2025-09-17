@@ -45,3 +45,4 @@ networks:
     external: true
   gitea_internal:
     driver: bridge
+    internal: true
