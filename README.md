@@ -77,7 +77,7 @@ tank/
    sudo chmod 600 .env
    ```
 
-   > **Note:** Be sure to update the `GITEA_DB_PASSWORD`, `GITEA_ROOT_URL`, `GITEA_SSH_DOMAIN`, and if necessary the `GITEA_DATA_VOLUME`.
+   > **Note:** Be sure to update the `GITEA_DB_PASSWORD`, `GITEA_ROOT_URL`, `GITEA_SSH_DOMAIN`, `GITEA_SSH_IP`,  and if necessary the `GITEA_DATA_VOLUME`.
 
    > **Note:** Create the `GITEA_ROOT_URL` using [Nginx Proxy Manager](https://github.com/Vantasin/Nginx-Proxy-Manager.git) as a reverse proxy for HTTPS certificates via Let's Encrypt.
    >
