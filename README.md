@@ -78,6 +78,8 @@ tank/
    ```
 
    > **Note:** Be sure to update the `GITEA_DB_PASSWORD`, `GITEA_ROOT_URL`, `GITEA_SSH_DOMAIN`, `GITEA_SSH_IP`,  and if necessary the `GITEA_DATA_VOLUME`.
+   >
+   > **Note:** If Gitea sends webhooks to a CI service on the same Docker network, add that service name to `GITEA_WEBHOOK_ALLOWED_HOST_LIST`, for example `external,woodpecker-server`. This is required for internal targets because Gitea only allows webhooks to approved hosts.
 
    > **Note:** Create the `GITEA_ROOT_URL` using [Nginx Proxy Manager](https://github.com/Vantasin/Nginx-Proxy-Manager.git) as a reverse proxy for HTTPS certificates via Let's Encrypt.
    >
